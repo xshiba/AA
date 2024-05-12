@@ -6,7 +6,7 @@ mt.__namecall = function(...)
     local method = getnamecallmethod()
     if method == "InvokeServer" then
         if tostring(args[1]) == "SkillAction" then
-            if _G.ActiveSkill then
+            if _G.ActiveSkill or _G.SaveSettings.AimbotPlayers then
                 if MobP ~= nil then
                     if not args[3] then
                         return old(...)
